@@ -1,0 +1,18 @@
+<div class="todo-items" *ngFor="let d of todo">
+    <div class="vb" [class.completed]="d.completed" (click)="clickfunction(d)">
+        <div class="check-box">
+            <i class="material-icons">check</i>
+        </div>
+        <div class="todo-text">
+            <p>{{d.text}}</p>
+        </div>
+    </div>
+    <div class="todo-control-box">
+        <div class="todo-control-button is-edit" (click)="edit(d)">
+            <i class="material-icons">edit</i>
+        </div>
+        <div class="todo-control-button is-danger" (click)="delete(d)">
+            <i class="material-icons">delete</i>
+        </div>
+    </div>
+</div>

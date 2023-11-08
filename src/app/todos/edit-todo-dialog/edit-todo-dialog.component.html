@@ -1,0 +1,27 @@
+<div class="text-bg">
+    <h1 class="title is-4 has-text-centered">EditTodos</h1>
+</div>
+<div mat-dialog-content>
+
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+        <div class="field">
+            <div class="control">
+                <input type="text" class="input" placeholder="enter and update the value" [ngModel]="todo.text"
+                    name="text" value="data.text" #inputdata ngModel>
+            </div>
+        </div>
+        <br>
+        <div class="field is-grouped is-grouped-right">
+            <div class="control">
+                <button class="button cancel" type="button" (click)="close()">
+                    Cancel
+                </button>
+            </div>
+            <div class="control">
+                <button class="button save" type="submit" (click)="save(form)">
+                    Save
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,136 @@
+.heading-section {
+    height: 30vh;
+    width: 100%;
+    padding: 50px;
+    background: linear-gradient(to left, rgb(52, 150, 150), rgb(19, 241, 193));
+    color: white;
+
+    h1.title {
+        text-shadow: 0px 0px 1px 0px rgb(black, 0.2);
+        color: white;
+    }
+}
+
+
+
+.container 
+{
+    max-width: 600px;
+}
+
+.add-todo-box {
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 0;
+    background-color: white;
+    margin-top: -25px;
+    border-radius: 4px;
+    font-size: smaller;
+    -webkit-box-shadow: 0px 13px 27px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 13px 27px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 13px 27px -7px rgba(0, 0, 0, 0.75);
+}
+
+.todo-items {
+    display: flex;
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    gap: 15px;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+    transition: opacity 0.2s;
+    // max-width: 800px;
+    min-width: 600px;
+}
+
+.todo-items .check-box {
+    border: 2px solid #eeee;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s;
+
+    i.material-icons {
+        opacity: 0 !important;
+        border-radius: 50%;
+    }
+}
+
+.todo-items {
+    border-bottom: 1px solid #f2f3f5;
+    padding-bottom: 10px;
+    max-width: 400px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    &.completed {
+        color: #aaa;
+    }
+}
+.todo-items:hover .todo-control-box
+{
+    visibility: visible;
+    transform: translateY(10px);
+}
+
+.todo-items:hover .check-box {
+
+    i.material-icons {
+        opacity: 1 !important;
+        background-color: #eeee;
+        transition: 0.2s;
+
+    }
+}
+
+.todo-text {
+    word-wrap: break-word !important;
+
+}
+
+.todo-items.completed .check-box i.material-icons {
+    background-color: green;
+    opacity: 1 !important;
+}
+
+.todo-control-box {
+    display: flex;
+    background-color: #cecbcb;
+    border-radius: 6px 6px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    visibility: hidden;
+    transform: translateY(0);
+
+}
+.todo-control-box:hover 
+{
+    transition: opacity 0.2s, visibility 0.2s transform 0.2s;
+    transition-delay: 0.4s;
+    transform: translateX(10px);
+}
+.todo-control-box .todo-control-button {
+    border-radius: 6px 6px 0px 0px;
+    padding: 1px;
+    &:hover {
+        background-color: #999494;
+
+    }
+
+    i.material-icons {
+        font-size: 20px;
+        margin: 2px;
+    }
+}
+
+.is-danger:active i.material-icons{
+    color: red !important;
+}
+.is-edit:active i.material-icons
+{
+    color: blue !important;
+}

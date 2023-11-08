@@ -1,0 +1,76 @@
+.todo-items
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: solid rgb(196, 185, 185) 1px;
+    .vb
+    {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 80%;
+        
+        .check-box 
+        {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background-color: wheat;
+            margin-right: 10px;
+            i.material-icons 
+            {
+                visibility: hidden;
+            }
+        }
+        .todo-text 
+        {
+            width: 100%;
+            text-align: center;
+        }
+        &:hover .check-box i.material-icons 
+        {
+            visibility: visible;
+        }
+    }
+    .todo-control-box 
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        background-color: aliceblue;
+        height: 25px;
+        width: 60px;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: ease-in-out 0.2s;
+        i.material-icons 
+        {
+            &:hover
+            {
+                background-color: rgb(167, 165, 165);
+            }
+        }
+    }
+}
+
+.vb.completed .check-box
+{
+background-color: rgb(20, 165, 20) !important;  ; 
+}
+.vb.completed .check-box i.material-icons 
+{
+    visibility: visible !important;
+}
+.vb.completed {
+    color: rgb(215, 224, 224);
+}
+
+.todo-items:hover .todo-control-box 
+{
+    visibility: visible !important;
+    transform: translateY(0px);
+    transition: transform 0.2s;
+
+}
